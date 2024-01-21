@@ -1,4 +1,5 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.BasicClasses;
 using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.CoreClasses
@@ -21,6 +22,8 @@ namespace Palworld.GameClasses.CoreClasses
         // --------------------------------------------------
         // Helpers
         // --------------------------------------------------
+
+        public readonly FName Name => Inheritance.Inheritance.Name;
 
         public readonly UStruct Super => SuperPtr.Read<UStruct>();
 

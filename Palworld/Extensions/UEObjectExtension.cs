@@ -5,8 +5,11 @@ namespace Palworld.Extensions
 {
     internal static class UEObjectExtension
     {
-        //public static bool IsValid(this UEObject entity) => entity.Name.Text.EndsWith("_C", StringComparison.Ordinal);
-        public static bool IsValid(this UObject entity) => entity.Name.Text == "BP_SheepBall_C";
+        public static bool IsValid(this UObject entity) => entity.Name.Text.EndsWith("_C", StringComparison.Ordinal);
+
+        public static bool IsPal(this UObject entity) => entity.InheritsFrom("BP_MonsterBase_C");
+
+        public static bool InheritsFrom(this UObject entity, string className) => entity.Struct.GetInheritanceChain().Any(name => name == className);
 
         public static T To<T>(this UObject entity) where T : unmanaged
         {
@@ -24,5 +27,23 @@ namespace Palworld.Extensions
                 Marshal.FreeHGlobal(buffer);
             }
         }
+
+        public static IEnumerable<string> GetInheritanceChain(this UStruct entity)
+        {
+            while (entity.Name.Text.Replace("None", "").Any())
+            {
+                yield return entity.Name.Text;
+
+                if (!SuperCache.TryGetValue(entity.SuperPtr, out UStruct super))
+                {
+                    super = entity.Super;
+                    SuperCache.Add(entity.SuperPtr, super);
+                }
+
+                entity = super;
+            }
+        }
+
+        private static Dictionary<nint, UStruct> SuperCache { get; set; } = new();
     }
 }

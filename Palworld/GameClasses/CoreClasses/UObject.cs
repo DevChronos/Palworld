@@ -29,6 +29,8 @@ namespace Palworld.GameClasses.CoreClasses
         // Helpers
         // --------------------------------------------------
 
+        public readonly UStruct Struct => Class.Inheritance;
+
         public readonly UClass Class => ClassPtr.Read<UClass>();
 
         public readonly UObject Outer => OuterPtr.Read<UObject>();

@@ -29,7 +29,7 @@ namespace Palworld.Core
             var entities = world.PersistentLevel.GetEntities().Where(entity => entity.IsValid()).ToList();
 
             LocalPlayer = world.OwningGameInstance.LocalPlayer;
-            Pals = entities.Select(entity => entity.To<AActor>()).ToList();
+            Pals = entities.Where(entity => entity.IsPal()).Select(entity => entity.To<AActor>()).ToList();
         }
     }
 }
