@@ -11,5 +11,23 @@
     <Setting Name="PalDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="EnableTreasure" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TreasureColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="TreasureDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="EnableItem" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ItemColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="ItemDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

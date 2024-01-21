@@ -58,5 +58,77 @@ namespace Palworld.Properties {
                 this["PalDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableTreasure {
+            get {
+                return ((bool)(this["EnableTreasure"]));
+            }
+            set {
+                this["EnableTreasure"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint TreasureColor {
+            get {
+                return ((uint)(this["TreasureColor"]));
+            }
+            set {
+                this["TreasureColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int TreasureDistance {
+            get {
+                return ((int)(this["TreasureDistance"]));
+            }
+            set {
+                this["TreasureDistance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableItem {
+            get {
+                return ((bool)(this["EnableItem"]));
+            }
+            set {
+                this["EnableItem"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint ItemColor {
+            get {
+                return ((uint)(this["ItemColor"]));
+            }
+            set {
+                this["ItemColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int ItemDistance {
+            get {
+                return ((int)(this["ItemDistance"]));
+            }
+            set {
+                this["ItemDistance"] = value;
+            }
+        }
     }
 }

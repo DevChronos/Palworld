@@ -17,12 +17,24 @@ namespace Palworld.Core
         public static bool EnablePal = Properties.User.Default.EnablePal;
         public static Vector4 PalColor = Properties.User.Default.PalColor.ToVector4();
         public static int PalDistance = Properties.User.Default.PalDistance;
+        public static bool EnableTreasure = Properties.User.Default.EnableTreasure;
+        public static Vector4 TreasureColor = Properties.User.Default.TreasureColor.ToVector4();
+        public static int TreasureDistance = Properties.User.Default.TreasureDistance;
+        public static bool EnableItem = Properties.User.Default.EnableItem;
+        public static Vector4 ItemColor = Properties.User.Default.ItemColor.ToVector4();
+        public static int ItemDistance = Properties.User.Default.ItemDistance;
 
         public static void Save()
         {
             Properties.User.Default.EnablePal = EnablePal;
             Properties.User.Default.PalColor = PalColor.ToUint();
             Properties.User.Default.PalDistance = PalDistance;
+            Properties.User.Default.EnableTreasure = EnableTreasure;
+            Properties.User.Default.TreasureColor = TreasureColor.ToUint();
+            Properties.User.Default.TreasureDistance = TreasureDistance;
+            Properties.User.Default.EnableItem = EnableItem;
+            Properties.User.Default.ItemColor = ItemColor.ToUint();
+            Properties.User.Default.ItemDistance = ItemDistance;
             Properties.User.Default.Save();
         }
     }

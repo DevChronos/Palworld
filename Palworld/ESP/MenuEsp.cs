@@ -22,6 +22,14 @@ namespace Palworld.ESP
                 ImGui.TableNextColumn(); ImGui.Checkbox("##EnablePal", ref Settings.EnablePal);
                 ImGui.TableNextColumn(); ImGui.ColorEdit4("##PalColor", ref Settings.PalColor, colorEditFlags);
                 ImGui.TableNextColumn(); ImGui.DragInt("##PalDistance", ref Settings.PalDistance);
+                ImGui.TableNextColumn(); ImGui.Text("Treasure");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnableTreasure", ref Settings.EnableTreasure);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##TreasureColor", ref Settings.TreasureColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##TreasureDistance", ref Settings.TreasureDistance);
+                ImGui.TableNextColumn(); ImGui.Text("Item");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnableItem", ref Settings.EnableItem);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##ItemColor", ref Settings.ItemColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##ItemDistance", ref Settings.ItemDistance);
                 ImGui.EndTable();
 
                 if (ImGui.Button("Save"))

@@ -33,6 +33,8 @@ namespace Palworld.ESP
                 {
                     DrawSettings();
                     DrawPals();
+                    DrawTreasures();
+                    DrawItems();
                 }
                 catch (Exception ex)
                 {

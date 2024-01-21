@@ -10,5 +10,9 @@ namespace Palworld.Core
         public static UPlayer LocalPlayer { get; private set; }
 
         public static IEnumerable<AActor> Pals { get; set; } = new List<AActor>();
+
+        public static IEnumerable<AActor> Treasures { get; set; } = new List<AActor>();
+
+        public static IEnumerable<AActor> Items { get; set; } = new List<AActor>();
     }
 }
