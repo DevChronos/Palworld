@@ -1,4 +1,5 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.BasicClasses;
 using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.EngineClasses
@@ -7,7 +8,7 @@ namespace Palworld.GameClasses.EngineClasses
     internal struct ULevel
     {
         [FieldOffset(0x0)]
-        public UEObject Inheritance;
+        public UObject Inheritance;
 
         [FieldOffset(0x98)]
         public nint EntitiesPtr;
@@ -19,16 +20,16 @@ namespace Palworld.GameClasses.EngineClasses
         // Helpers
         // --------------------------------------------------
 
-        public readonly IEnumerable<UEObject> GetEntities()
+        public readonly IEnumerable<UObject> GetEntities()
         {
             for (int i = 0; i < EntitiesSize; i++)
                 yield return GetEntity(i);
         }
 
-        private readonly UEObject GetEntity(int index)
+        private readonly UObject GetEntity(int index)
         {
             var address = EntitiesPtr.Read<nint>(index * Marshal.SizeOf<nint>());
-            var result = address.Read<UEObject>();
+            var result = address.Read<UObject>();
             result.Address = address;
             return result;
         }

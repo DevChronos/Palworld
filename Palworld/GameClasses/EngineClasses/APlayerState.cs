@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using Palworld.GameClasses.BasicClasses;
+using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.EngineClasses
 {
@@ -12,6 +13,6 @@ namespace Palworld.GameClasses.EngineClasses
         public int PlayerId;
 
         [FieldOffset(0x388)]
-        public UEString PlayerNamePrivate;
+        public FString PlayerNamePrivate;
     }
 }

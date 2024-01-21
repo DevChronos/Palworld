@@ -1,10 +1,10 @@
 ﻿using Palworld.Core;
 using System.Runtime.InteropServices;
 
-namespace Palworld.GameClasses.EngineClasses
+namespace Palworld.GameClasses.BasicClasses
 {
     [StructLayout(LayoutKind.Explicit, Size = 0x10)]
-    internal struct UEString
+    internal struct FString
     {
         [FieldOffset(0x0)]
         public nint Address;

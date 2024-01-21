@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using Palworld.GameClasses.BasicClasses;
 
 namespace Palworld.GameClasses.EngineClasses
 {

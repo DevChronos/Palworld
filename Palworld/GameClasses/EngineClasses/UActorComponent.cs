@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using Palworld.GameClasses.BasicClasses;
 
 namespace Palworld.GameClasses.EngineClasses
 {
@@ -6,6 +7,6 @@ namespace Palworld.GameClasses.EngineClasses
     internal struct UActorComponent
     {
         [FieldOffset(0x0)]
-        public UEObject Inheritance;
+        public UObject Inheritance;
     }
 }

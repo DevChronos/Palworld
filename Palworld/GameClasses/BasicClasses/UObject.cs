@@ -1,10 +1,10 @@
 ﻿using Palworld.Extensions;
 using System.Runtime.InteropServices;
 
-namespace Palworld.GameClasses.EngineClasses
+namespace Palworld.GameClasses.BasicClasses
 {
     [StructLayout(LayoutKind.Explicit)]
-    internal struct UEObject
+    internal struct UObject
     {
         [FieldOffset(0x0)]
         public nint Address;
@@ -13,7 +13,7 @@ namespace Palworld.GameClasses.EngineClasses
         public nint ClassPtr;
 
         [FieldOffset(0x18)]
-        public UEName Name;
+        public UName Name;
 
         [FieldOffset(0x20)]
         public nint OuterPtr;
@@ -31,14 +31,14 @@ namespace Palworld.GameClasses.EngineClasses
         // Helpers
         // --------------------------------------------------
 
-        public readonly UEObject Class => ClassPtr.Read<UEObject>();
+        public readonly UObject Class => ClassPtr.Read<UObject>();
 
-        public readonly UEObject Outer => OuterPtr.Read<UEObject>();
+        public readonly UObject Outer => OuterPtr.Read<UObject>();
 
-        public readonly UEObject Next => NextPtr.Read<UEObject>();
+        public readonly UObject Next => NextPtr.Read<UObject>();
 
-        public readonly UEObject Super => SuperPtr.Read<UEObject>();
+        public readonly UObject Super => SuperPtr.Read<UObject>();
 
-        public readonly UEObject Children => ChildrenPtr.Read<UEObject>();
+        public readonly UObject Children => ChildrenPtr.Read<UObject>();
     }
 }

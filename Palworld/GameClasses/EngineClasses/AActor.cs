@@ -1,4 +1,5 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.BasicClasses;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
@@ -8,7 +9,7 @@ namespace Palworld.GameClasses.EngineClasses
     internal struct AActor
     {
         [FieldOffset(0x0)]
-        public UEObject Inheritance;
+        public UObject Inheritance;
 
         [FieldOffset(0x198)]
         public nint RootComponentPtr;

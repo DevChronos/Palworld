@@ -1,10 +1,10 @@
 ﻿using Palworld.Core;
 using System.Runtime.InteropServices;
 
-namespace Palworld.GameClasses.EngineClasses
+namespace Palworld.GameClasses.BasicClasses
 {
     [StructLayout(LayoutKind.Explicit, Size = 0x8)]
-    internal struct UEName
+    internal struct UName
     {
         [FieldOffset(0x0)]
         public int NameId;
@@ -18,11 +18,11 @@ namespace Palworld.GameClasses.EngineClasses
         private static string GetNameById(int id)
         {
             var page = id >> 16;
-            var offset = ((ushort)id) * 2;
+            var offset = (ushort)id * 2;
 
             var pagePtr = Engine.Memory.Read<nint>(FNamePool + page * 0x8);
             var namePtr = pagePtr + offset;
-            var nameLength = Engine.Memory.Read<Int16>(namePtr) >> 6;
+            var nameLength = Engine.Memory.Read<short>(namePtr) >> 6;
 
             return Engine.Memory.ReadString(namePtr + 2, nameLength);
         }

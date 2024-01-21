@@ -1,4 +1,5 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.BasicClasses;
 using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.EngineClasses
@@ -7,7 +8,7 @@ namespace Palworld.GameClasses.EngineClasses
     internal struct UWorld
     {
         [FieldOffset(0x0)]
-        public UEObject Inheritance;
+        public UObject Inheritance;
 
         [FieldOffset(0x30)]
         public nint PersistentLevelPtr;

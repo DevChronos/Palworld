@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using System.Runtime.InteropServices;
 
-namespace Palworld.GameClasses.EngineClasses
+namespace Palworld.GameClasses.BasicClasses
 {
     [StructLayout(LayoutKind.Explicit)]
     internal struct FVector
