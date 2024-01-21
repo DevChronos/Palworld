@@ -1,4 +1,5 @@
-﻿using Palworld.GameClasses.EngineClasses;
+﻿using Palworld.Extensions;
+using Palworld.GameClasses.EngineClasses;
 
 namespace Palworld.Core
 {
@@ -25,7 +26,10 @@ namespace Palworld.Core
             if (world.OwningGameInstancePtr == nint.Zero)
                 return;
 
+            var entities = world.PersistentLevel.GetEntities().Where(entity => entity.IsValid()).ToList();
+
             LocalPlayer = world.OwningGameInstance.LocalPlayer;
+            Pals = entities.Select(entity => entity.To<AActor>()).ToList();
         }
     }
 }

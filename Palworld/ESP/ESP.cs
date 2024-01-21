@@ -28,19 +28,7 @@ namespace Palworld.ESP
             {
                 try
                 {
-                    //DrawSettings();
-                    //DrawCrosshair();
-                    //DrawPlayers();
-                    //DrawNPCs();
-                    //DrawShips();
-                    //DrawMapPins();
-                    //DrawTreasureMaps();
-                    //DrawShipwrecks();
-                    //DrawItems();
-                    //DrawRadar();
-                    //DrawCrews();
-                    //DrawLogs();
-                    //DrawDebug();
+                    DrawPals();
                 }
                 catch (Exception ex)
                 {

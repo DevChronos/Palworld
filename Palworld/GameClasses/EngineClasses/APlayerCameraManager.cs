@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.EngineClasses
 {
@@ -9,7 +8,7 @@ namespace Palworld.GameClasses.EngineClasses
         [FieldOffset(0x0)]
         public AActor Inheritance;
 
-        [FieldOffset(0x320)]
+        [FieldOffset(0x22B0)]
         public FCameraCacheEntry CameraCache;
     }
 
@@ -24,10 +23,10 @@ namespace Palworld.GameClasses.EngineClasses
     internal struct FMinimalViewInfo
     {
         [FieldOffset(0x0)]
-        public Vector3 Location;
+        public FVector Location;
 
         [FieldOffset(0x18)]
-        public Vector3 Rotation;
+        public FVector Rotation;
 
         [FieldOffset(0x30)]
         public float FOV;

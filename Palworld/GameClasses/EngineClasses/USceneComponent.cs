@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace Palworld.GameClasses.EngineClasses
 {
@@ -9,7 +8,7 @@ namespace Palworld.GameClasses.EngineClasses
         [FieldOffset(0x0)]
         public UActorComponent Inheritance;
 
-        [FieldOffset(0x12C)]
-        public Vector3 Location;
+        [FieldOffset(0x128)]
+        public FVector Location;
     }
 }

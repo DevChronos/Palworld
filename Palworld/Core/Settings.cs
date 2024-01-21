@@ -5,7 +5,7 @@
     {
         //UWorld => 48 8B 05 ? ? ? ? 48 8B 88 ? ? ? ? 48 85 C9 74 06 48 8B 49 70
         //GObjects => 89 0D ? ? ? ? 48 8B DF 48 89 5C 24
-        //GNames => 48 8B 1D ? ? ? ? 48 85 DB 75 3A
+        //GNames => 48 8D 0D ? ? ? ? E8 ? ? ? ? 4C 8B C0 C6 05
 
         public const string PROCESS_NAME = "Palworld-Win64-Shipping";
         public const nint WORLD_OFFSET = 0x8924E28;

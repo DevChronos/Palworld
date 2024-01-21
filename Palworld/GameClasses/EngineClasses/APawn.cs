@@ -21,6 +21,6 @@ namespace Palworld.GameClasses.EngineClasses
 
         public readonly APlayerState PlayerState => PlayerStatePtr.Read<APlayerState>();
 
-        public readonly Vector3 Location => RootComponent.Location;
+        public readonly Vector3 Location => RootComponent.Location.ToVector3;
     }
 }

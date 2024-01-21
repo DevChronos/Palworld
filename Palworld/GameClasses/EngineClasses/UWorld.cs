@@ -9,12 +9,17 @@ namespace Palworld.GameClasses.EngineClasses
         [FieldOffset(0x0)]
         public UEObject Inheritance;
 
+        [FieldOffset(0x30)]
+        public nint PersistentLevelPtr;
+
         [FieldOffset(0x1B8)]
         public nint OwningGameInstancePtr;
 
         // --------------------------------------------------
         // Helpers
         // --------------------------------------------------
+
+        public readonly ULevel PersistentLevel => PersistentLevelPtr.Read<ULevel>();
 
         public readonly UGameInstance OwningGameInstance => OwningGameInstancePtr.Read<UGameInstance>();
     }

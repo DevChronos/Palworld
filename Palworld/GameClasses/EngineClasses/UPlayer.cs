@@ -21,8 +21,8 @@ namespace Palworld.GameClasses.EngineClasses
 
         public readonly APlayerState PlayerState => PlayerController.AcknowledgedPawn.PlayerState;
 
-        public readonly Vector3 Location => PlayerController.AcknowledgedPawn.RootComponent.Location;
+        public readonly Vector3 Location => PlayerController.AcknowledgedPawn.RootComponent.Location.ToVector3;
 
-        public readonly float Yaw => PlayerController.PlayerCameraManager.CameraCache.POV.Rotation.Y;
+        public readonly double Yaw => PlayerController.PlayerCameraManager.CameraCache.POV.Rotation.Y;
     }
 }

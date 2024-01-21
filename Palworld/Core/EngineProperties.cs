@@ -8,5 +8,7 @@ namespace Palworld.Core
         public static MemoryController Memory { get; private set; } = new MemoryController(Settings.PROCESS_NAME);
 
         public static UPlayer LocalPlayer { get; private set; }
+
+        public static IEnumerable<AActor> Pals { get; set; } = new List<AActor>();
     }
 }
