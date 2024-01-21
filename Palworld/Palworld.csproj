@@ -18,4 +18,19 @@
     <ProjectReference Include="..\..\GameHackingFramework\GameHackingFramework\GameHackingFramework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Properties\User.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>User.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\User.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>

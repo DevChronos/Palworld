@@ -31,6 +31,7 @@ namespace Palworld.ESP
             {
                 try
                 {
+                    DrawSettings();
                     DrawPals();
                 }
                 catch (Exception ex)

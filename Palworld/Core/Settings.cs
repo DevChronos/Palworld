@@ -1,4 +1,7 @@
-﻿namespace Palworld.Core
+﻿using GameHackingFramework.Extensions;
+using System.Numerics;
+
+namespace Palworld.Core
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Critical Code Smell", "S2223:Non-constant static fields should not be visible", Justification = "ImGui")]
     internal static class Settings
@@ -11,8 +14,16 @@
         public const nint WORLD_OFFSET = 0x8924E28;
         public const nint GNAMES_OFFSET = 0x8717A00;
 
+        public static bool EnablePal = Properties.User.Default.EnablePal;
+        public static Vector4 PalColor = Properties.User.Default.PalColor.ToVector4();
+        public static int PalDistance = Properties.User.Default.PalDistance;
+
         public static void Save()
         {
+            Properties.User.Default.EnablePal = EnablePal;
+            Properties.User.Default.PalColor = PalColor.ToUint();
+            Properties.User.Default.PalDistance = PalDistance;
+            Properties.User.Default.Save();
         }
     }
 }

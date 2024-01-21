@@ -19,5 +19,7 @@ namespace Palworld.Extensions
                 ImGui.GetWindowViewport().Size,
                 out screenPosition);
         }
+
+        public static float GetDistance(this Vector3 worldPosition) => Vector3.Distance(Engine.LocalPlayer.Location, worldPosition) / 100;
     }
 }

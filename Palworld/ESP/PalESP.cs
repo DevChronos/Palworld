@@ -1,5 +1,4 @@
-﻿using GameHackingFramework.Extensions;
-using Palworld.Core;
+﻿using Palworld.Core;
 using Palworld.Extensions;
 using System.Numerics;
 
@@ -9,12 +8,17 @@ namespace Palworld.ESP
     {
         private static void DrawPals()
         {
+            if (!Settings.EnablePal)
+                return;
+
             foreach (var pal in Engine.Pals)
             {
-                if (!pal.Location.ToScreen(out Vector2 screenPosition))
+                var location = pal.Location;
+
+                if (location.GetDistance() > Settings.PalDistance || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
-                DrawCenteredText(screenPosition, (0xFFFFFFFF).ToVector4(), "PAL");
+                DrawCenteredText(screenPosition, Settings.PalColor, $"{pal.Inheritance.Class.Inheritance.Name.Text} [{pal.Location.GetDistance():0}m]");
             }
         }
     }
