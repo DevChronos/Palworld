@@ -10,7 +10,7 @@ namespace Palworld.GameClasses.EngineClasses
         public AActor Inheritance;
 
         [FieldOffset(0x22B0)]
-        public FCameraCacheEntry CameraCache;
+        public FCameraCacheEntry CameraCachePrivate;
     }
 
     [StructLayout(LayoutKind.Explicit)]

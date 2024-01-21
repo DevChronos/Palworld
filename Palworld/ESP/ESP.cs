@@ -12,10 +12,13 @@ namespace Palworld.ESP
 
         protected override Task PostInitialized()
         {
+            Size = new System.Drawing.Size(1920, 1080);
+            VSync = false;
+
             ImGui.GetStyle().WindowRounding = 5;
             Engine.StartUpdateThread();
 
-            return Task.CompletedTask;
+            return base.PostInitialized();
         }
 
         protected override void Render()

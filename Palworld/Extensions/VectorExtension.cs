@@ -9,13 +9,13 @@ namespace Palworld.Extensions
     {
         public static bool ToScreen(this Vector3 worldPosition, out Vector2 screenPosition)
         {
-            var camera = Engine.LocalPlayer.PlayerController.PlayerCameraManager.CameraCache.POV;
+            var pov = Engine.LocalPlayer.PlayerController.PlayerCameraManager.CameraCachePrivate.POV;
 
             return RenderingMaths.WorldToScreen(
                 worldPosition,
-                camera.Location.ToVector3,
-                camera.Rotation.ToVector3,
-                camera.FOV,
+                pov.Location.ToVector3,
+                pov.Rotation.ToVector3,
+                pov.FOV,
                 ImGui.GetWindowViewport().Size,
                 out screenPosition);
         }

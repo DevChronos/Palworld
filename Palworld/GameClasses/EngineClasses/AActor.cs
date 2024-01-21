@@ -20,6 +20,6 @@ namespace Palworld.GameClasses.EngineClasses
 
         public readonly USceneComponent RootComponent => RootComponentPtr.Read<USceneComponent>();
 
-        public readonly Vector3 Location => RootComponent.Location.ToVector3;
+        public readonly Vector3 Location => RootComponent.RelativeLocation.ToVector3;
     }
 }

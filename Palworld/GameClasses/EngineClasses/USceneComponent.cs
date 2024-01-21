@@ -10,6 +10,6 @@ namespace Palworld.GameClasses.EngineClasses
         public UActorComponent Inheritance;
 
         [FieldOffset(0x128)]
-        public FVector Location;
+        public FVector RelativeLocation;
     }
 }
