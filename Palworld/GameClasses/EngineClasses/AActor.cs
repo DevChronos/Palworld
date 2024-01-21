@@ -1,5 +1,5 @@
 ﻿using Palworld.Extensions;
-using Palworld.GameClasses.BasicClasses;
+using Palworld.GameClasses.CoreClasses;
 using System.Numerics;
 using System.Runtime.InteropServices;
 

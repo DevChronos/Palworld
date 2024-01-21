@@ -1,4 +1,4 @@
-﻿using Palworld.GameClasses.BasicClasses;
+﻿using Palworld.GameClasses.CoreClasses;
 using System.Runtime.InteropServices;
 
 namespace Palworld.Extensions

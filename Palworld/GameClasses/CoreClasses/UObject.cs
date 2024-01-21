@@ -1,7 +1,8 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.BasicClasses;
 using System.Runtime.InteropServices;
 
-namespace Palworld.GameClasses.BasicClasses
+namespace Palworld.GameClasses.CoreClasses
 {
     [StructLayout(LayoutKind.Explicit)]
     internal struct UObject
@@ -9,23 +10,20 @@ namespace Palworld.GameClasses.BasicClasses
         [FieldOffset(0x0)]
         public nint Address;
 
+        [FieldOffset(0x8)]
+        public int Flags;
+
+        [FieldOffset(0xC)]
+        public int Index;
+
         [FieldOffset(0x10)]
         public nint ClassPtr;
 
         [FieldOffset(0x18)]
-        public UName Name;
+        public FName Name;
 
         [FieldOffset(0x20)]
         public nint OuterPtr;
-
-        [FieldOffset(0x28)]
-        public nint NextPtr;
-
-        [FieldOffset(0x30)]
-        public nint SuperPtr;
-
-        [FieldOffset(0x38)]
-        public nint ChildrenPtr;
 
         // --------------------------------------------------
         // Helpers
@@ -34,11 +32,5 @@ namespace Palworld.GameClasses.BasicClasses
         public readonly UObject Class => ClassPtr.Read<UObject>();
 
         public readonly UObject Outer => OuterPtr.Read<UObject>();
-
-        public readonly UObject Next => NextPtr.Read<UObject>();
-
-        public readonly UObject Super => SuperPtr.Read<UObject>();
-
-        public readonly UObject Children => ChildrenPtr.Read<UObject>();
     }
 }

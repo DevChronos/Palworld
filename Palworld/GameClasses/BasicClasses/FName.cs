@@ -4,16 +4,19 @@ using System.Runtime.InteropServices;
 namespace Palworld.GameClasses.BasicClasses
 {
     [StructLayout(LayoutKind.Explicit, Size = 0x8)]
-    internal struct UName
+    internal struct FName
     {
         [FieldOffset(0x0)]
-        public int NameId;
+        public int ComparisonIndex;
+
+        [FieldOffset(0x4)]
+        public int Number;
 
         // --------------------------------------------------
         // Helpers
         // --------------------------------------------------
 
-        public readonly string Text => GetNameById(NameId);
+        public readonly string Text => GetNameById(ComparisonIndex);
 
         private static string GetNameById(int id)
         {
