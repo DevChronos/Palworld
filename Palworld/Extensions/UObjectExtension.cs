@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Palworld.Extensions
 {
-    internal static class UEObjectExtension
+    internal static class UObjectExtension
     {
         public static bool IsValid(this UObject entity) => entity.Name.Text.EndsWith("_C", StringComparison.Ordinal);
 
