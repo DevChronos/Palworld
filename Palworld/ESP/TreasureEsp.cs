@@ -34,7 +34,7 @@ namespace Palworld.ESP
                 if (location.GetDistance() > Settings.ItemDistance || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
-                DrawCenteredText(screenPosition, Settings.ItemColor, $"{item.Inheritance.Class.Inheritance.Name.Text} [{item.Location.GetDistance():0}m]");
+                DrawCenteredText(screenPosition, Settings.ItemColor, $"{item.MapObjectModel.Name} [{item.Location.GetDistance():0}m]");
             }
         }
     }

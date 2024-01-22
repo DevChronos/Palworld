@@ -1,5 +1,6 @@
 ﻿using GameHackingFramework.Memory;
 using Palworld.GameClasses.EngineClasses;
+using Palworld.GameClasses.PalClasses;
 
 namespace Palworld.Core
 {
@@ -13,6 +14,6 @@ namespace Palworld.Core
 
         public static IEnumerable<AActor> Treasures { get; set; } = new List<AActor>();
 
-        public static IEnumerable<AActor> Items { get; set; } = new List<AActor>();
+        public static IEnumerable<APalMapObject> Items { get; set; } = new List<APalMapObject>();
     }
 }
