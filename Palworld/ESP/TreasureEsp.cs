@@ -18,7 +18,7 @@ namespace Palworld.ESP
                 if (location.GetDistance() > Settings.TreasureDistance || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
-                DrawCenteredText(screenPosition, Settings.TreasureColor, $"{treasure.Inheritance.Class.Inheritance.Name.Text} [{treasure.Location.GetDistance():0}m]");
+                DrawCenteredText(screenPosition, Settings.TreasureColor, $"{treasure.MapObjectModel.Name} [{treasure.Location.GetDistance():0}m]");
             }
         }
 

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace Palworld.GameClasses.CoreClasses
 {
     [StructLayout(LayoutKind.Explicit)]
-    internal struct UObject
+    internal struct UObject : IEquatable<UObject>
     {
         [FieldOffset(0x0)]
         public nint Address;
@@ -28,6 +28,8 @@ namespace Palworld.GameClasses.CoreClasses
         // --------------------------------------------------
         // Helpers
         // --------------------------------------------------
+
+        public readonly bool Equals(UObject obj) => Address == obj.Address;
 
         public readonly UStruct Struct => Class.Inheritance;
 

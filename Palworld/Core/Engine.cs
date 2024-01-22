@@ -28,11 +28,13 @@ namespace Palworld.Core
                 return;
 
             var entities = world.PersistentLevel.GetEntities().Where(entity => entity.IsValid()).ToList();
+            var items = entities.Where(entity => entity.IsItem()).ToList();
+            var treasures = items.Where(entity => entity.IsTreasure()).ToList();
 
             LocalPlayer = world.OwningGameInstance.LocalPlayer;
             Pals = entities.Where(entity => entity.IsPal()).Select(entity => entity.To<AActor>()).ToList();
-            Treasures = entities.Where(entity => entity.IsTreasure()).Select(entity => entity.To<AActor>()).ToList();
-            Items = entities.Where(entity => entity.IsItem()).Select(entity => entity.To<APalMapObject>()).ToList();
+            Items = items.Where(item => !treasures.Any(treasure => treasure.Equals(item))).Select(entity => entity.To<APalMapObject>()).ToList();
+            Treasures = treasures.Select(entity => entity.To<APalMapObject>()).ToList();
         }
     }
 }
