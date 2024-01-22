@@ -29,5 +29,14 @@
     <Setting Name="ItemDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="EnablePlayer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PlayerColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="PlayerDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

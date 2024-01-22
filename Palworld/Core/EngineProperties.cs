@@ -10,6 +10,8 @@ namespace Palworld.Core
 
         public static UPlayer LocalPlayer { get; private set; }
 
+        public static IEnumerable<APawn> Players { get; set; } = new List<APawn>();
+
         public static IEnumerable<AActor> Pals { get; set; } = new List<AActor>();
 
         public static IEnumerable<APalMapObject> Items { get; set; } = new List<APalMapObject>();

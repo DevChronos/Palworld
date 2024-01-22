@@ -130,5 +130,41 @@ namespace Palworld.Properties {
                 this["ItemDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnablePlayer {
+            get {
+                return ((bool)(this["EnablePlayer"]));
+            }
+            set {
+                this["EnablePlayer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint PlayerColor {
+            get {
+                return ((uint)(this["PlayerColor"]));
+            }
+            set {
+                this["PlayerColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int PlayerDistance {
+            get {
+                return ((int)(this["PlayerDistance"]));
+            }
+            set {
+                this["PlayerDistance"] = value;
+            }
+        }
     }
 }

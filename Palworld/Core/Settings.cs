@@ -14,6 +14,9 @@ namespace Palworld.Core
         public const nint WORLD_OFFSET = 0x8924E28;
         public const nint GNAMES_OFFSET = 0x8717A00;
 
+        public static bool EnablePlayer = Properties.User.Default.EnablePlayer;
+        public static Vector4 PlayerColor = Properties.User.Default.PlayerColor.ToVector4();
+        public static int PlayerDistance = Properties.User.Default.PlayerDistance;
         public static bool EnablePal = Properties.User.Default.EnablePal;
         public static Vector4 PalColor = Properties.User.Default.PalColor.ToVector4();
         public static int PalDistance = Properties.User.Default.PalDistance;
@@ -26,6 +29,9 @@ namespace Palworld.Core
 
         public static void Save()
         {
+            Properties.User.Default.EnablePlayer = EnablePlayer;
+            Properties.User.Default.PlayerColor = PlayerColor.ToUint();
+            Properties.User.Default.PlayerDistance = PlayerDistance;
             Properties.User.Default.EnablePal = EnablePal;
             Properties.User.Default.PalColor = PalColor.ToUint();
             Properties.User.Default.PalDistance = PalDistance;

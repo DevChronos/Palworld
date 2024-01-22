@@ -32,6 +32,7 @@ namespace Palworld.ESP
                 try
                 {
                     DrawSettings();
+                    DrawPlayers();
                     DrawPals();
                     DrawTreasures();
                     DrawItems();

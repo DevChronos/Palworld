@@ -18,6 +18,10 @@ namespace Palworld.ESP
                 ImGui.TableNextColumn(); ImGui.Text("Enabled");
                 ImGui.TableNextColumn(); ImGui.Text("Color");
                 ImGui.TableNextColumn(); ImGui.Text("Distance");
+                ImGui.TableNextColumn(); ImGui.Text("Player");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnablePlayer", ref Settings.EnablePlayer);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##PlayerColor", ref Settings.PlayerColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##PlayerDistance", ref Settings.PlayerDistance);
                 ImGui.TableNextColumn(); ImGui.Text("Pal");
                 ImGui.TableNextColumn(); ImGui.Checkbox("##EnablePal", ref Settings.EnablePal);
                 ImGui.TableNextColumn(); ImGui.ColorEdit4("##PalColor", ref Settings.PalColor, colorEditFlags);
