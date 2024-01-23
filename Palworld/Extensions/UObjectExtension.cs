@@ -5,11 +5,11 @@ namespace Palworld.Extensions
 {
     internal static class UObjectExtension
     {
-        public static bool IsValid(this UObject entity) => entity.Name.Text.EndsWith("_C", StringComparison.Ordinal);
+        public static bool IsValid(this UObject entity) => entity.Struct.Name.Text.EndsWith("_C", StringComparison.Ordinal);
 
         public static bool IsPlayer(this UObject entity) => entity.InheritsFrom("PalPlayerCharacter");
 
-        public static bool IsPal(this UObject entity) => entity.InheritsFrom("BP_MonsterBase_C");
+        public static bool IsPal(this UObject entity) => entity.InheritsFrom("PalMonsterCharacter");
 
         public static bool IsTreasure(this UObject entity) => entity.InheritsFrom("PalMapObjectTreasureBox");
 

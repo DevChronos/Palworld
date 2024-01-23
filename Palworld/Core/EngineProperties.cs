@@ -1,4 +1,5 @@
 ﻿using GameHackingFramework.Memory;
+using Palworld.GameClasses.CoreClasses;
 using Palworld.GameClasses.EngineClasses;
 using Palworld.GameClasses.PalClasses;
 
@@ -7,6 +8,8 @@ namespace Palworld.Core
     internal static partial class Engine
     {
         public static MemoryController Memory { get; private set; } = new MemoryController(Settings.PROCESS_NAME);
+
+        public static IEnumerable<UObject> Entities { get; set; } = new List<UObject>();
 
         public static UPlayer LocalPlayer { get; private set; }
 
