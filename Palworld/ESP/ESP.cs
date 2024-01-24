@@ -36,6 +36,8 @@ namespace Palworld.ESP
                     DrawPals();
                     DrawTreasures();
                     DrawItems();
+                    DrawNotes();
+                    DrawRelics();
 
                     //DebugEntities();
                 }

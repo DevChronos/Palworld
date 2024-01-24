@@ -26,6 +26,12 @@ namespace Palworld.Core
         public static bool EnableItem = Properties.User.Default.EnableItem;
         public static Vector4 ItemColor = Properties.User.Default.ItemColor.ToVector4();
         public static int ItemDistance = Properties.User.Default.ItemDistance;
+        public static bool EnableNote = Properties.User.Default.EnableNote;
+        public static Vector4 NoteColor = Properties.User.Default.NoteColor.ToVector4();
+        public static int NoteDistance = Properties.User.Default.NoteDistance;
+        public static bool EnableRelic = Properties.User.Default.EnableRelic;
+        public static Vector4 RelicColor = Properties.User.Default.RelicColor.ToVector4();
+        public static int RelicDistance = Properties.User.Default.RelicDistance;
 
         public static void Save()
         {
@@ -41,6 +47,12 @@ namespace Palworld.Core
             Properties.User.Default.EnableItem = EnableItem;
             Properties.User.Default.ItemColor = ItemColor.ToUint();
             Properties.User.Default.ItemDistance = ItemDistance;
+            Properties.User.Default.EnableNote = EnableNote;
+            Properties.User.Default.NoteColor = NoteColor.ToUint();
+            Properties.User.Default.NoteDistance = NoteDistance;
+            Properties.User.Default.EnableRelic = EnableRelic;
+            Properties.User.Default.RelicColor = RelicColor.ToUint();
+            Properties.User.Default.RelicDistance = RelicDistance;
             Properties.User.Default.Save();
         }
     }

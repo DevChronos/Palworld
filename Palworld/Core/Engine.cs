@@ -36,6 +36,8 @@ namespace Palworld.Core
             Pals = Entities.Where(entity => entity.IsPal()).Select(entity => entity.To<AActor>()).ToList();
             Items = items.Where(item => !treasures.Any(treasure => treasure.Equals(item))).Select(entity => entity.To<APalMapObject>()).ToList();
             Treasures = treasures.Select(entity => entity.To<APalMapObject>()).ToList();
+            Notes = Entities.Where(entity => entity.IsNote()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
+            Relics = Entities.Where(entity => entity.IsRelic()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
         }
     }
 }

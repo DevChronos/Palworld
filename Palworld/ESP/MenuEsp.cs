@@ -34,6 +34,14 @@ namespace Palworld.ESP
                 ImGui.TableNextColumn(); ImGui.Checkbox("##EnableItem", ref Settings.EnableItem);
                 ImGui.TableNextColumn(); ImGui.ColorEdit4("##ItemColor", ref Settings.ItemColor, colorEditFlags);
                 ImGui.TableNextColumn(); ImGui.DragInt("##ItemDistance", ref Settings.ItemDistance);
+                ImGui.TableNextColumn(); ImGui.Text("Note");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnableNote", ref Settings.EnableNote);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##NoteColor", ref Settings.NoteColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##NoteDistance", ref Settings.NoteDistance);
+                ImGui.TableNextColumn(); ImGui.Text("Relic");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnableRelic", ref Settings.EnableRelic);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##RelicColor", ref Settings.RelicColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##RelicDistance", ref Settings.RelicDistance);
                 ImGui.EndTable();
 
                 if (ImGui.Button("Save"))

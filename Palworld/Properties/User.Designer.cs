@@ -166,5 +166,77 @@ namespace Palworld.Properties {
                 this["PlayerDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableNote {
+            get {
+                return ((bool)(this["EnableNote"]));
+            }
+            set {
+                this["EnableNote"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint NoteColor {
+            get {
+                return ((uint)(this["NoteColor"]));
+            }
+            set {
+                this["NoteColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int NoteDistance {
+            get {
+                return ((int)(this["NoteDistance"]));
+            }
+            set {
+                this["NoteDistance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableRelic {
+            get {
+                return ((bool)(this["EnableRelic"]));
+            }
+            set {
+                this["EnableRelic"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint RelicColor {
+            get {
+                return ((uint)(this["RelicColor"]));
+            }
+            set {
+                this["RelicColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int RelicDistance {
+            get {
+                return ((int)(this["RelicDistance"]));
+            }
+            set {
+                this["RelicDistance"] = value;
+            }
+        }
     }
 }

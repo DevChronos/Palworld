@@ -38,5 +38,23 @@
     <Setting Name="PlayerDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="EnableNote" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NoteColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="NoteDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="EnableRelic" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RelicColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="RelicDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
