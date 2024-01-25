@@ -42,6 +42,10 @@ namespace Palworld.ESP
                 ImGui.TableNextColumn(); ImGui.Checkbox("##EnableRelic", ref Settings.EnableRelic);
                 ImGui.TableNextColumn(); ImGui.ColorEdit4("##RelicColor", ref Settings.RelicColor, colorEditFlags);
                 ImGui.TableNextColumn(); ImGui.DragInt("##RelicDistance", ref Settings.RelicDistance);
+                ImGui.TableNextColumn(); ImGui.Text("Teleport");
+                ImGui.TableNextColumn(); ImGui.Checkbox("##EnableTeleport", ref Settings.EnableTeleport);
+                ImGui.TableNextColumn(); ImGui.ColorEdit4("##TeleportColor", ref Settings.TeleportColor, colorEditFlags);
+                ImGui.TableNextColumn(); ImGui.DragInt("##TeleportDistance", ref Settings.TeleportDistance);
                 ImGui.EndTable();
 
                 if (ImGui.Button("Save"))

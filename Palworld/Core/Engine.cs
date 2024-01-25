@@ -38,6 +38,7 @@ namespace Palworld.Core
             Treasures = treasures.Select(entity => entity.To<APalMapObject>()).ToList();
             Notes = Entities.Where(entity => entity.IsNote()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
             Relics = Entities.Where(entity => entity.IsRelic()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
+            Teleports = Entities.Where(entity => entity.IsTeleport()).Select(entity => entity.To<APalLevelObjectActor>()).ToList();
         }
     }
 }

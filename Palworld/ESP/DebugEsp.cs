@@ -9,9 +9,6 @@ namespace Palworld.ESP
     {
         private static void DebugEntities()
         {
-            if (!Settings.EnableItem)
-                return;
-
             foreach (var item in Engine.Entities.Select(entity => entity.To<AActor>()))
             {
                 var location = item.Location;

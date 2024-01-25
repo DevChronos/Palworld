@@ -32,6 +32,9 @@ namespace Palworld.Core
         public static bool EnableRelic = Properties.User.Default.EnableRelic;
         public static Vector4 RelicColor = Properties.User.Default.RelicColor.ToVector4();
         public static int RelicDistance = Properties.User.Default.RelicDistance;
+        public static bool EnableTeleport = Properties.User.Default.EnableTeleport;
+        public static Vector4 TeleportColor = Properties.User.Default.TeleportColor.ToVector4();
+        public static int TeleportDistance = Properties.User.Default.TeleportDistance;
 
         public static void Save()
         {
@@ -53,6 +56,9 @@ namespace Palworld.Core
             Properties.User.Default.EnableRelic = EnableRelic;
             Properties.User.Default.RelicColor = RelicColor.ToUint();
             Properties.User.Default.RelicDistance = RelicDistance;
+            Properties.User.Default.EnableTeleport = EnableTeleport;
+            Properties.User.Default.TeleportColor = TeleportColor.ToUint();
+            Properties.User.Default.TeleportDistance = TeleportDistance;
             Properties.User.Default.Save();
         }
     }

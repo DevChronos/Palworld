@@ -24,5 +24,7 @@ namespace Palworld.Core
         public static IEnumerable<APalLevelObjectObtainable> Notes { get; set; } = new List<APalLevelObjectObtainable>();
 
         public static IEnumerable<APalLevelObjectObtainable> Relics { get; set; } = new List<APalLevelObjectObtainable>();
+
+        public static IEnumerable<APalLevelObjectActor> Teleports { get; set; } = new List<APalLevelObjectActor>();
     }
 }

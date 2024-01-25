@@ -19,6 +19,8 @@ namespace Palworld.Extensions
 
         public static bool IsRelic(this UObject entity) => entity.InheritsFrom("PalLevelObjectRelic");
 
+        public static bool IsTeleport(this UObject entity) => entity.Struct.Name.Text == "BP_LevelObject_TowerFastTravelPoint_C";
+
         public static bool InheritsFrom(this UObject entity, string className) => entity.Struct.GetInheritanceChain().Any(name => name == className);
 
         public static T To<T>(this UObject entity) where T : unmanaged

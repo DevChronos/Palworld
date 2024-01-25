@@ -238,5 +238,41 @@ namespace Palworld.Properties {
                 this["RelicDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableTeleport {
+            get {
+                return ((bool)(this["EnableTeleport"]));
+            }
+            set {
+                this["EnableTeleport"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint TeleportColor {
+            get {
+                return ((uint)(this["TeleportColor"]));
+            }
+            set {
+                this["TeleportColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int TeleportDistance {
+            get {
+                return ((int)(this["TeleportDistance"]));
+            }
+            set {
+                this["TeleportDistance"] = value;
+            }
+        }
     }
 }

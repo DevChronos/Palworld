@@ -18,7 +18,7 @@ namespace Palworld.ESP
                 if (location.GetDistance() > Settings.RelicDistance || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
-                DrawCenteredText(screenPosition, Settings.RelicColor, $"Relic [{relic.Inheritance.Inheritance.Location.GetDistance():0}m]");
+                DrawCenteredText(screenPosition, Settings.RelicColor, $"Relic [{location.GetDistance():0}m]");
             }
         }
     }
