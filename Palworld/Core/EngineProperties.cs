@@ -15,7 +15,7 @@ namespace Palworld.Core
 
         public static IEnumerable<APawn> Players { get; set; } = new List<APawn>();
 
-        public static IEnumerable<AActor> Pals { get; set; } = new List<AActor>();
+        public static IEnumerable<APalCharacter> Pals { get; set; } = new List<APalCharacter>();
 
         public static IEnumerable<APalMapObject> Items { get; set; } = new List<APalMapObject>();
 

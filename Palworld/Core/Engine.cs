@@ -33,7 +33,7 @@ namespace Palworld.Core
 
             LocalPlayer = world.OwningGameInstance.LocalPlayer;
             Players = Entities.Where(entity => entity.IsPlayer()).Select(entity => entity.To<APawn>()).ToList();
-            Pals = Entities.Where(entity => entity.IsPal()).Select(entity => entity.To<AActor>()).ToList();
+            Pals = Entities.Where(entity => entity.IsPal()).Select(entity => entity.To<APalCharacter>()).ToList();
             Items = items.Where(item => !treasures.Any(treasure => treasure.Equals(item))).Select(entity => entity.To<APalMapObject>()).ToList();
             Treasures = treasures.Select(entity => entity.To<APalMapObject>()).ToList();
             Notes = Entities.Where(entity => entity.IsNote()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
