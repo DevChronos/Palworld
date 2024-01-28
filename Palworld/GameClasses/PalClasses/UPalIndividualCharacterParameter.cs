@@ -1,4 +1,5 @@
-﻿using Palworld.Extensions;
+﻿using Palworld.Core;
+using Palworld.Extensions;
 using Palworld.GameClasses.BasicClasses;
 using Palworld.GameClasses.CoreClasses;
 using System.Runtime.InteropServices;
@@ -13,6 +14,16 @@ namespace Palworld.GameClasses.PalClasses
 
         [FieldOffset(0x270)]
         public FPalIndividualCharacterSaveParameter SaveParameter;
+
+        // --------------------------------------------------
+        // Helpers
+        // --------------------------------------------------
+
+        public readonly string GetGoldenPassives()
+        {
+            var passives = SaveParameter.GetPassiveSkillList().Where(p => Settings.GoldenSkills.ContainsKey(p.Text)).Select(p => Settings.GoldenSkills[p.Text]);
+            return string.Join(Environment.NewLine, passives);
+        }
     }
 
     [StructLayout(LayoutKind.Explicit)]

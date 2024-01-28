@@ -15,11 +15,11 @@ namespace Palworld.ESP
             {
                 var location = pal.Location;
 
-                if (location.GetDistance() > Settings.PalDistance || !location.ToScreen(out Vector2 screenPosition))
+                if (location.GetDistance() > Settings.PalDistance || pal.SaveParameter.HP == 0 || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
                 var description = $"{pal.SaveParameter.CharacterID.Text} [{location.GetDistance():0}m] ({pal.SaveParameter.HP / 1000} / {pal.SaveParameter.MaxHP / 1000})";
-                var passives = string.Join(Environment.NewLine, pal.SaveParameter.GetPassiveSkillList().ToList().Select(p => p.Text));
+                var passives = pal.CharacterParameterComponent.IndividualParameter.GetGoldenPassives();
 
                 DrawCenteredText(screenPosition, Settings.PalColor, description); screenPosition.Y += 15;
                 DrawCenteredText(screenPosition, Settings.PalColor, passives);

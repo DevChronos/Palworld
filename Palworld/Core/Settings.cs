@@ -11,8 +11,10 @@ namespace Palworld.Core
         //GNames => 48 8D 05 ? ? ? ? EB 13 48 8D 0D ? ? ? ? E8 ? ? ? ? C6 05 ? ? ? ? ? 0F 10
 
         public const string PROCESS_NAME = "Palworld-Win64-Shipping";
-        public const nint WORLD_OFFSET = 0x890BD28;
-        public const nint GNAMES_OFFSET = 0x86FE900;
+        public const nint WORLD_OFFSET = 0x8926D28;
+        public const nint GNAMES_OFFSET = 0x8719900;
+
+        public static readonly Dictionary<string, string> GoldenSkills = new();
 
         public static bool EnablePlayer = Properties.User.Default.EnablePlayer;
         public static Vector4 PlayerColor = Properties.User.Default.PlayerColor.ToVector4();
@@ -35,6 +37,26 @@ namespace Palworld.Core
         public static bool EnableTeleport = Properties.User.Default.EnableTeleport;
         public static Vector4 TeleportColor = Properties.User.Default.TeleportColor.ToVector4();
         public static int TeleportDistance = Properties.User.Default.TeleportDistance;
+
+        static Settings()
+        {
+            GoldenSkills.Add("TrainerATK_UP", "Player ATK +10%");
+            GoldenSkills.Add("TrainerDEF_UP", "Player DEF +10%");
+            GoldenSkills.Add("TrainerLogging_up1", "Player Logging +25%");
+            GoldenSkills.Add("TrainerMining_up1", "Player Mining +25%");
+            GoldenSkills.Add("TrainerWorkSpeed_UP", "Player Work +25%");
+
+            GoldenSkills.Add("CraftSpeed_up1", "Pal Work +20%");
+            GoldenSkills.Add("CraftSpeed_up2", "Pal Work +50%");
+            GoldenSkills.Add("PAL_Sanity_Down", "Pal SAN +15%");
+            GoldenSkills.Add("PAL_FullStomach_Down", "Pal Hungry -15%");
+
+            GoldenSkills.Add("Noukin", "Pal ATK +30%");
+            GoldenSkills.Add("PAL_ALLAttack_up2", "Pal ATK +20%");
+            GoldenSkills.Add("Rare", "Pal ATK & Work +15%");
+            GoldenSkills.Add("Deffence_up2", "Pal DEF +20%");
+            GoldenSkills.Add("MoveSpeed_up", "Pal Speed +20% / +30%");
+        }
 
         public static void Save()
         {
