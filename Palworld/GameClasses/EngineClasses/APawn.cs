@@ -1,4 +1,5 @@
 ﻿using Palworld.Extensions;
+using Palworld.GameClasses.PalClasses;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
@@ -19,7 +20,7 @@ namespace Palworld.GameClasses.EngineClasses
 
         public readonly USceneComponent RootComponent => Inheritance.RootComponent;
 
-        public readonly APlayerState PlayerState => PlayerStatePtr.Read<APlayerState>();
+        public readonly APalPlayerState PlayerState => PlayerStatePtr.Read<APalPlayerState>();
 
         public readonly Vector3 Location => RootComponent.RelativeLocation.ToVector3;
     }

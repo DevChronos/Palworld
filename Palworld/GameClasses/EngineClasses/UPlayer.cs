@@ -1,5 +1,6 @@
 ﻿using Palworld.Extensions;
 using Palworld.GameClasses.CoreClasses;
+using Palworld.GameClasses.PalClasses;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
@@ -20,7 +21,7 @@ namespace Palworld.GameClasses.EngineClasses
 
         public readonly APlayerController PlayerController => PlayerControllerPtr.Read<APlayerController>();
 
-        public readonly APlayerState PlayerState => PlayerController.AcknowledgedPawn.PlayerState;
+        public readonly APalPlayerState PlayerState => PlayerController.AcknowledgedPawn.PlayerState;
 
         public readonly Vector3 Location => PlayerController.AcknowledgedPawn.RootComponent.RelativeLocation.ToVector3;
 

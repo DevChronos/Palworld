@@ -18,7 +18,7 @@ namespace Palworld.ESP
                 if (location.GetDistance() > Settings.PlayerDistance || !location.ToScreen(out Vector2 screenPosition))
                     continue;
 
-                DrawCenteredText(screenPosition, Settings.PlayerColor, $"{player.PlayerState.PlayerNamePrivate.Text} [{location.GetDistance():0}m]");
+                DrawCenteredText(screenPosition, Settings.PlayerColor, $"{player.PlayerState.Inheritance.PlayerNamePrivate.Text} [{location.GetDistance():0}m]");
             }
         }
     }
