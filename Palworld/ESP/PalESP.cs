@@ -23,7 +23,7 @@ namespace Palworld.ESP
                     continue;
 
                 var rare = saveParameter.IsRarePal ? "<RARE> " : string.Empty;
-                var description = $"{rare}{saveParameter.CharacterID.Text} [{location.GetDistance():0}m] ({saveParameter.HP / 1000} / {saveParameter.MaxHP / 1000})";
+                var description = $"{rare}{saveParameter.CharacterID.Text} [{location.GetDistance():0}m]";
                 var passives = pal.CharacterParameterComponent.IndividualParameter.GetGoldenPassives();
 
                 DrawCenteredText(screenPosition, Settings.PalColor, description); screenPosition.Y += 15;

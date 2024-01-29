@@ -13,7 +13,7 @@ namespace Palworld.Extensions
 
         public static bool IsTreasure(this UObject entity) => entity.InheritsFrom("PalMapObjectTreasureBox");
 
-        public static bool IsItem(this UObject entity) => entity.InheritsFrom("PalMapObject");
+        public static bool IsItem(this UObject entity) => entity.InheritsFrom("PalMapObject") && !entity.InheritsFrom("PalBuildObject");
 
         public static bool IsNote(this UObject entity) => entity.InheritsFrom("PalLevelObjectNote");
 
