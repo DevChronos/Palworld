@@ -29,13 +29,15 @@ namespace Palworld.Core
 
             Entities = world.PersistentLevel.GetEntities().Where(entity => entity.IsValid()).ToList();
             var items = Entities.Where(entity => entity.IsItem()).ToList();
-            var treasures = items.Where(entity => entity.IsTreasure()).ToList();
+            var treasures = items.Where(entity => entity.IsTreasure());
+            var eggs = items.Where(entity => entity.IsEgg());
 
             LocalPlayer = world.OwningGameInstance.LocalPlayer;
             Players = Entities.Where(entity => entity.IsPlayer()).Select(entity => entity.To<APawn>()).ToList();
             Pals = Entities.Where(entity => entity.IsPal()).Select(entity => entity.To<APalCharacter>()).ToList();
-            Items = items.Where(item => !treasures.Any(treasure => treasure.Equals(item))).Select(entity => entity.To<APalMapObject>()).ToList();
+            Items = items.Where(item => !item.IsTreasure() && !item.IsEgg()).Select(entity => entity.To<APalMapObject>()).ToList();
             Treasures = treasures.Select(entity => entity.To<APalMapObject>()).ToList();
+            Eggs = eggs.Select(entity => entity.To<APalMapObjectPalEgg>()).ToList();
             Notes = Entities.Where(entity => entity.IsNote()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
             Relics = Entities.Where(entity => entity.IsRelic()).Select(entity => entity.To<APalLevelObjectObtainable>()).ToList();
             Teleports = Entities.Where(entity => entity.IsTeleport()).Select(entity => entity.To<APalLevelObjectActor>()).ToList();

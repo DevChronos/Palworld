@@ -34,8 +34,9 @@ namespace Palworld.ESP
                     DrawSettings();
                     DrawPlayers();
                     DrawPals();
-                    DrawTreasures();
                     DrawItems();
+                    DrawTreasures();
+                    DrawEggs();
                     DrawNotes();
                     DrawRelics();
                     DrawTeleports();

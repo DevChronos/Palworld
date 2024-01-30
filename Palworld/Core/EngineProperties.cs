@@ -21,6 +21,8 @@ namespace Palworld.Core
 
         public static IEnumerable<APalMapObject> Treasures { get; set; } = new List<APalMapObject>();
 
+        public static IEnumerable<APalMapObjectPalEgg> Eggs { get; set; } = new List<APalMapObjectPalEgg>();
+
         public static IEnumerable<APalLevelObjectObtainable> Notes { get; set; } = new List<APalLevelObjectObtainable>();
 
         public static IEnumerable<APalLevelObjectObtainable> Relics { get; set; } = new List<APalLevelObjectObtainable>();

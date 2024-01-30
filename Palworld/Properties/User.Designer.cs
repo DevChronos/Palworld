@@ -274,5 +274,41 @@ namespace Palworld.Properties {
                 this["TeleportDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableEgg {
+            get {
+                return ((bool)(this["EnableEgg"]));
+            }
+            set {
+                this["EnableEgg"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("855572735")]
+        public uint EggColor {
+            get {
+                return ((uint)(this["EggColor"]));
+            }
+            set {
+                this["EggColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int EggDistance {
+            get {
+                return ((int)(this["EggDistance"]));
+            }
+            set {
+                this["EggDistance"] = value;
+            }
+        }
     }
 }

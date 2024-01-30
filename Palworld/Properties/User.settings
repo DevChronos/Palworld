@@ -65,5 +65,14 @@
     <Setting Name="TeleportDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="EnableEgg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EggColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">855572735</Value>
+    </Setting>
+    <Setting Name="EggDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
