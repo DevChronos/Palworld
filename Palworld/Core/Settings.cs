@@ -11,8 +11,8 @@ namespace Palworld.Core
         //GNames => 48 8D 05 ? ? ? ? EB 13 48 8D 0D ? ? ? ? E8 ? ? ? ? C6 05 ? ? ? ? ? 0F 10
 
         public const string PROCESS_NAME = "Palworld-Win64-Shipping";
-        public const nint WORLD_OFFSET = 0x8926D28;
-        public const nint GNAMES_OFFSET = 0x8719900;
+        public const nint WORLD_OFFSET = 0x895D428;
+        public const nint GNAMES_OFFSET = 0x8750000;
 
         public static readonly Dictionary<string, string> GoldenSkills = new();
 
